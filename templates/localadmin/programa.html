@@ -1,0 +1,27 @@
+{% extends 'base/indexAdmin.html' %}
+
+{% block contenido %}
+<h1>Programa</h1>
+<table class="table table-responsive table-hover">
+	<thead class="thead">
+		<tr>
+			<th scope="col">#</th>
+			<th scope="col">Día</th>
+			<th scope="col">Horario</th>
+			<th scope="col">Actividad</th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for programa in object_list %}
+			<tr>
+				<td>{{programa.id}}</td>
+				<td class="tabla-id">{{programa.dia}}</td>
+				<td class="tabla-id">{{programa.horario}}</td>
+				<td class="programa-actividad">{{programa.actividad}}</td>
+			</tr>
+		{% endfor %}
+
+	</tbody>
+</table>
+
+{% endblock %}

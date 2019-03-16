@@ -1,0 +1,32 @@
+{% extends 'base/indexAdmin.html' %}
+
+{% block contenido %}
+<h1>Inscripciones</h1>
+<table class="table table-responsive table-hover">
+	<thead class="thead">
+		<tr>
+			<th scope="col">#</th>
+			<th scope="col">Día</th>
+			<th scope="col">Horario</th>
+			<th scope="col">Taller</th>
+			<th scope="col">Apellido Paterno</th>
+			<th scope="col">Apellido Materno</th>
+			<th scope="col">Nombre</th>
+		</tr>
+	</thead>
+	<body>
+		{% for inscripcion in object_list %}
+			<tr>
+				<td>{{inscripcion.id}}</td>
+				<td class="tabla-id">{{inscripcion.dia}}</td>
+				<td class="tabla-id">{{inscripcion.horario}}</td>
+				<td>{{inscripcion.taller}}</td>
+				<td>{{inscripcion.apellidoPaterno}}</td>
+				<td>{{inscripcion.apellidoMaterno}}</td>
+				<td>{{inscripcion.nombre}}</td>
+			</tr>
+		{% endfor %}
+	</tbody>
+</table>
+
+{% endblock %}

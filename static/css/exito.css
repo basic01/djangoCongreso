@@ -1,0 +1,36 @@
+body{
+	background-color: #FCFCFC;
+}
+.contenedor .exito{
+	width: var(--ancho);
+	margin-left: var(--margen-izq);
+	margin-top: 10%;
+	text-align: center;
+}
+
+.exito h1{
+	font-size: 5em;
+	color: #0DC5E6;
+}
+
+.exito p{
+	margin-top: .5em;
+	font-size: 1.35em;
+	color: var(--color-parrafos);
+	margin-bottom: 2em;
+}
+
+
+.exito a{
+	border: none;
+	padding: .6em 0em;
+	border-radius: var(--btn-radio);
+	font-size: 1.1em;
+	margin-top: .5em;
+	float: left;
+	margin-left: 43%;
+	width: 14%;
+	text-align: center;
+	box-sizing: border-box;
+	text-decoration: none;
+}

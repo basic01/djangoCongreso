@@ -1,0 +1,50 @@
+{% extends 'base/index.html' %}
+{% load static %}
+{% block estilos %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/form.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/inscripcion.css' %}">
+{% endblock %}
+
+{% block contenido %}
+
+	{% if messages %}
+		{% for message in messages %}
+			{% if message.tags == 'warning' %}
+				<h1>dscdscdscsc</h1>
+				{{ participante.nombre }}
+			{% endif %}
+		{% endfor %}
+	{% endif %}
+
+	<div class="cont">
+		<h1>Inscripción</h1>
+		<label>Taller:</label>
+		<p>{{taller.nombre}}</p>
+		<div class="datos">
+			<label>Lugares disponibles:</label>
+			{% if  taller.cupo %}
+				<p>{{taller.cupo}} lugares</p>
+			{% else %}
+			<p>0 lugares</p>
+			{% endif %}
+		</div>
+		
+		<form class="form" method="POST">
+			<p>Si ya estás registrado completa los siguientes campos:</p>
+			{% csrf_token %}
+			{{ form.as_p }}
+			<!--<label>Nombre:</label>
+			<input type="text"></input>
+			<label>Apellido Paterno:</label>
+			<input type="text"></input>
+			<label>Apellido Materno:</label>
+			<input type="text"></input>
+			<button type="submit">Inscribirse</button>-->
+			<button type="submit">Inscribirse</button>
+			<a href="{% url 'taller:tallerRegistro' %}">¿Todavía no estás registrado?</a>
+		</form>
+	</div>
+
+<script type="text/javascript" src="{% static 'js/inscripcion.js' %}"></script>
+
+{% endblock %}

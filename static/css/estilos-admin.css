@@ -1,0 +1,130 @@
+:root{
+	--top: 4.5em;
+	--font1:'Questrial', sans-serif;
+	--margen-top: 2em;
+	--fuente-titulos: 'Playfair Display', serif;;
+	--color-titulos: #3A3A3A;/*#2E2E2E;*/
+	--color-parrafos: rgba(0,0,0,.6);
+	--font2:'Didact Gothic', sans-serif;
+	--btn-radio: 20px;
+	--btn-padding: 10px 2px;
+	--tamaño-fuente-h2: 2.7em;
+	--tamaño-fuente-p: 1.2em;
+	--margen-top-h1: 2.5em;
+	--tamaño-fuente-h1: 4.2em;
+}
+
+.nav-item a{
+	font-size: 1.1em;
+}
+
+
+*{
+	margin: 0;
+	padding: 0;
+	outline: none;
+	font-family: var(--font1);
+	-webkit-tap-highlight-color: none;
+	line-height: 1.2em;
+}
+
+.container{
+	margin-top: var(--margen-top);
+	margin-bottom: var(--margen-top);
+}
+.container h1{
+	margin-right: .5em;
+	float: left;
+	margin-bottom: .5em;
+	font-family: var(--fuente-titulos);
+}
+
+.inicio h1{
+	text-align: center;
+}
+
+.opciones{
+	width: 100%;
+	margin-top: 1em;
+}
+
+.opciones a{
+	display: block;
+	background-color: #007BFF;
+	color: #fff;
+	border-radius:5px;
+	font-size: 1.1em;
+	font-weight: lighter;
+	padding: 12px 10px;
+	margin-bottom: 1em;
+	text-align: center;
+	text-decoration: none;
+}
+
+.opciones a:hover{
+	padding: 11px 10px;
+}
+
+table{
+	text-align: center;
+}
+
+.btn-agregar{
+	border: none;
+	border-radius: var(--btn-radio);
+	font-size: 1em;
+	padding: .5em 2em;
+	margin-top: .5em;
+	text-align: center;
+	box-sizing: border-box;
+	text-decoration: none;
+	cursor: pointer;
+	outline: none;
+	background-color: #0DC5E6;
+	color: #fff;
+	margin-bottom: 1.5em;
+	float: left;
+}
+
+.btn-agregar:hover{
+	color: #fff;
+	text-decoration: none;
+	padding: .45em 1.9em;
+}
+.thead{
+	background-color:#0482FF;
+	color: #fff;
+}
+
+th{
+	font-weight: lighter;
+	text-align: center;
+}
+
+.acciones a{
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+tbody>tr:hover{
+	background-color: rgba(0,0,0,.03) !important;
+}
+
+.programa-actividad{
+	width: 40%;
+	text-align: justify;
+}
+
+.taller-nombre{
+	width: 35%;
+	text-align: left;
+}
+
+.taller-ponente{
+	width: 20%;
+	text-align: left;
+}
+
+.tabla-id{
+	color: #0482FF;
+}

@@ -1,0 +1,243 @@
+label{
+	color: #0DC5E6;
+}
+.contenedor>.intro{
+	background-color: none;
+	opacity: .9;
+	float: left;
+	box-sizing: border-box;
+	border-radius: 5px;
+}
+
+.intro img{
+	width: 100%;
+	box-shadow: 0px 5px 10px 5px rgba(0,0,0,.15);
+	border-radius: 5px;
+}
+.registrate{
+	margin-top: 1em;
+	padding-top: 0;
+	float: left;
+	text-align: center;
+	margin-top: 4em;
+	margin-bottom: 2em;
+}
+
+.registrate label{
+	float: left;
+	text-align: center;
+	display: block;
+	width: 100%;
+	font-size: 1.4em;
+	margin-bottom: .5em;
+}
+
+.registrate p{
+	float: left;
+	text-align: center;
+	display: block;
+	width: 100%;
+	color: var(--color-parrafos);
+	font-size: 1.2em;
+}
+
+.registrate a{
+	text-align: center;
+	border: none;
+	margin-top: 2.5em;
+	margin-bottom: .5em;
+	float: left;
+	padding: .7em 0em;
+	box-sizing: border-box;
+	border-radius: var(--btn-radio);
+	font-size: 1em;
+	/*background-color: #0482FF;*/
+	width: 16%;
+	margin-left: 42%;
+	background-color: #0DC5E6;
+	text-decoration: none;
+}
+
+/*Bloque acerca */
+ .contenedor .contacto, .detalles{
+	float: left;
+	padding-top: var(--margen-top);
+	padding-bottom: var(--margen-top);
+}
+
+.registrate h1, .acerca-texto h2, .detalles-texto h2, .contacto-texto h3{
+	font-size: var(--tamaño-fuente-h2);
+	color: var(--color-titulos);
+	/*margin-bottom: .5em;*/
+	padding-bottom: .5em;
+	/*border-bottom: 1px solid rgba(0,0,0,.1);*/
+	border-radius: 10px;
+	text-align: center;
+}
+
+/*Fin bloque acerca */
+
+/*---------------------------------*/
+
+/*Inicio bloque detalles*/
+.detalles{
+	/*padding-top: 0;*/
+	padding-bottom: 0;
+	float: left;
+}
+.detalles .detalles-texto{
+	width: 60%;
+	float: left;
+	margin-left: 20%;
+	padding-bottom: 2em;
+	border: 1px solid rgba(0,0,0,.07);
+	border-radius: 10px;
+	box-shadow: 0px 0px 10px 5px rgba(0,0,0,.03);
+	/*background-color:#4EC5E7;
+	background-color: #1EB0DB;*/
+}
+
+.detalles-texto h2{
+	background-color: rgba(0,0,0,.8);
+	padding: 1em 0em;
+	margin-bottom: 0;
+	color: #fff;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+.detalles-texto .detalles-datos{
+	color: #fff;
+	text-align: center;
+	margin-top: 2em;
+}
+
+.detalles-datos label{
+	/*font-family: var(--fuente-titulos);*/
+	font-size: 1.25em;
+	float: left;
+	margin-bottom: .5em;
+	width: 100%;
+}
+
+.detalles-datos p{
+	font-size: var(--tamaño-fuente-p);
+	margin-bottom: 1em;
+	width: 80%;
+	margin-left:10%;
+	margin-right: 10%;
+	color: var(--color-parrafos);
+	line-height: 1.5em;
+	font-weight: lighter;
+}
+
+/*Fin bloque detalles*/
+
+/*-----------------------------------*/
+
+/*Inicio bloque contacto */
+
+.contacto-texto h3{
+	text-align: center;
+}
+
+.contacto-texto p{
+	color: var(--color-parrafos);
+	font-size: var(--tamaño-fuente-p);
+	font-weight: lighter;
+	text-align: center;
+	margin-bottom: .5em;
+}
+
+.contacto-datos{
+	float: left;
+	width: 100%;
+}
+
+.contacto-datos .contacto-dato{
+	float: left;
+	width: 100%;
+	text-align: center;
+	margin-top: 1em;
+}
+
+.contacto-dato label{
+	font-size: 1.3em;
+	color: rgba(0,0,0,.7);
+}
+
+.contacto-dato p{
+	margin-top: .5em;
+	color: rgba(0,0,0,.7);
+	color: #0DC5E6;
+}
+
+
+@media (max-width: 870px){
+	
+	 .contenedor .intro{
+	 	width: 100%;
+	 	padding-top: 0;
+	 	margin-top: 1em;
+	 	margin-left: 0;
+	 }
+
+	 .intro img{
+	 	border-radius: 0;
+	 	box-shadow: none;
+	 	/*
+	 	width: 130%;
+	 	margin-left: -30%;*/
+	 }
+
+	.registrate, .contacto{
+		width: 80%;
+		margin-left: 10%;
+	}
+
+	.registrate h1, .acerca-texto h2, .contacto-texto h3{
+		font-size: calc(var(--tamaño-fuente-h2) - .7em);
+	}
+
+	.registrate label, .contacto-dato label, .detalles-texto label{
+		font-size: 1.1em;
+	}
+	.registrate p, .contacto-texto p, .detalles-texto p{
+		font-size: 1em;
+	}
+	.registrate a{
+		font-size: .9em;
+		width: 20%;
+		margin-left: 40%;
+		text-align: center;
+	}
+
+	 .detalles .detalles-texto{
+		width: 100%;
+		margin-left: 0;
+	}
+
+	.detalles-texto h2{
+		font-size: calc(var(--tamaño-fuente-h2) - 1em);
+	}
+
+	.detalles .detalles-texto{
+		padding-bottom: calc(var(--margen-top) - 1.5em);
+	}
+
+
+}
+
+@media (max-width: 600px){
+	.registrate a{
+		width: 40%;
+		margin-left: 30%;
+	}
+}
+
+@media (max-width: 500px){
+	
+	 .intro img{
+	 	width: 160%;
+	 	margin-left: -60%;
+	 }
+}

@@ -1,0 +1,62 @@
+
+.cont label{
+	color: #0DC5E6;
+	font-size: 1.5em;
+	margin-top: 1em;
+}
+
+.cont a{
+	display: block;
+	background-color: #fff;
+	color: #0DC5E6;
+	text-decoration: none;
+	margin-bottom: 1em;
+}
+
+.cont p{
+	margin-top: .2em;
+	font-size: 1.2em;
+	width: 60%;
+	margin-left: 20%;
+	color: var(--color-titulos);
+}
+
+.cont .datos{
+	width: 100%;
+	float: left;
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+
+.datos label{
+	font-size: 1.2em;
+}
+.datos p{
+	font-size: 1em;
+}
+
+.form p{
+	width: 100%;
+	margin-left: 0;
+	margin-top: 1.5em;
+	font-size: 1em;
+	color: var(--color-parrafos);
+}
+
+.form label{
+	color: var(--color-parrafos);
+	font-size: 1.05em;
+}
+
+@media (max-width: 500px){
+	.cont p{
+		font-size: 1.1em;
+		width: 80%;
+		margin-left: 10%;
+	}
+	.form p{
+		font-size: 1em;
+		width: 100%;
+		margin-left: 0;
+	}
+}

@@ -1,0 +1,31 @@
+{% extends 'base/indexAdmin.html' %}
+
+{% block contenido %}
+<h1>Talleres</h1>
+<table class="table table-responsive table-hover">
+	<thead class="thead">
+		<tr>
+			<th scope="col">#</th>
+			<th scope="col">Día</th>
+			<th scope="col">Horario</th>
+			<th scope="col">Taller</th>
+			<th scope="col">Ponente</th>
+			<th scope="col">Cupo</th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for taller in object_list %}
+			<tr>
+				<td>{{taller.id}}</td>
+				<td class="tabla-id">{{taller.dia}}</td>
+				<td class="tabla-id">{{taller.horario}}</td>
+				<td class="taller-nombre">{{taller.nombre}}</td>
+				<td class="taller-ponente">{{taller.ponente}}</td>
+				<td>{{taller.cupo}}</td>
+			</tr>
+		{% endfor %}
+
+	</tbody>
+</table>
+
+{% endblock %}

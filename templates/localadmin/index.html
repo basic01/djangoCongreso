@@ -1,0 +1,16 @@
+{% extends 'base/indexAdmin.html' %}
+
+{% block contenido %}
+<div class="row cont-form justify-content-md-center">
+	<div class="row">
+		<h1>Menú Principal</h1>
+		<div class="opciones">
+			<a href="{% url 'taller:administradorParticipantes' %}">Participantes</a>
+			<a href="{% url 'taller:administradorParticipantesMondragon' %}">Mondragón</a>
+			<a href="{% url 'taller:administradorPrograma' %}">Programa</a>
+			<a href="{% url 'taller:administradorTalleres' %}">Talleres</a>
+			<a href="{% url 'taller:administradorInscripciones' %}">Inscripciones</a>
+		</div>
+	</div>
+</div>
+{% endblock %}

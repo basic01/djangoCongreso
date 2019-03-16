@@ -1,0 +1,17 @@
+{% extends 'base/index.html '%}
+{% load static %}
+
+{% block estilos %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/form.css' %}">
+{% endblock %}
+
+{% block contenido %}
+<div class="cont">
+	<h1>Registro</h1>
+	<form class="form" method="post">
+		{% csrf_token %}
+		{{form.as_p}}
+		<button type="submit">Registrarse</button>
+	</form>
+</div>
+{% endblock %}

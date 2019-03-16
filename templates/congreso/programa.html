@@ -1,0 +1,51 @@
+{% extends 'base/index.html '%}
+{% load static %}
+
+{% block estilos %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/programa.css' %}">
+{% endblock %}
+
+{% block contenido %}
+
+	<div class="contenedor">
+		<section class="header">
+			<h1>Cronograma</h1>
+			<p>Itinerario para los días jueves 25 y viernes 26 de abril</p>
+		</section>
+		<section class="cronograma">
+			<h2>Jueves 25 de abril</h2>
+			<div class="tabla">
+				<div class="tabla-titulos">
+					<label class="horario">HORARIO</label>
+					<label class="actividad">ACTIVIDAD</label>
+				</div>
+
+				{% for detalle in jueves %}					
+					<div class="tabla-parrafos">
+						<p class="horario">{{detalle.horario}}</p>
+						<p class="actividad">{{detalle.actividad}}</p>
+					</div>
+				{% endfor %}
+			</div>
+
+		</section>
+
+		<section class="cronograma">
+			<h2>Viernes 26 de abril</h2>
+			<div class="tabla">
+				<div class="tabla-titulos">
+					<label class="horario">HORARIO</label>
+					<label class="actividad">ACTIVIDAD</label>
+				</div>
+				{% for detalle in viernes %}
+					<div class="tabla-parrafos">
+						<p class="horario">{{detalle.horario}}</p>
+						<p class="actividad">{{detalle.actividad}}</p>
+					</div>
+				{% endfor %}
+			</div>
+
+		</section>
+	</div>
+
+{% endblock %}

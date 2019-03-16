@@ -1,0 +1,64 @@
+{% extends 'base/index.html '%}
+{% load static %}
+{% block estilos %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/inicio.css' %}">
+{% endblock %}
+
+{% block contenido %}
+
+<div class="contenedor">
+	<section class="intro">
+		<img src="{% static 'img/fondo.png' %}">
+	</section>
+	
+	<section class="registrate">
+		<h1>REGISTRO</h1>
+		<label>¿Ya estás registrado?</label>
+		<p>Regístrate para unirte a la experiencia "Detrás de tu trastorno"</p>
+		<a href="{% url 'taller:tallerRegistro' %}">Regístrate</a>
+	</section>
+
+	<section class="detalles">
+		<div class="detalles-texto">
+			<h2>DETALLES EVENTO</h2>
+			<div class="detalles-datos">
+				<div class="detalles-dato">
+					<label>Lugar: </label>
+					<p>{{ detalles.lugar }}</p>
+				</div>
+				<div class="detalles-dato">
+					<label>Fecha: </label>
+					<p>{{ detalles.fecha }}</p>
+				</div>
+				<div class="detalles-dato">
+					<label>Hora: </label>
+					<p>{{ detalles.hora }}</p>
+				</div>
+				<div class="detalles-dato">
+					<label>Dirección: </label>
+					<p>{{ detalles.direccion }}</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="contacto">
+		<div class="contacto-texto">
+			<h3>CONTACTO</h3>
+			<p>Si tienes alguna duda o pregunta sobre el evento, contáctanos a través de estos medios:</p>
+			<div class="contacto-datos">
+				<div class="contacto-dato">
+					<label>Teléfonos:</label>
+					<p>{{ detalles.telefono }}</p>
+					<p>{{ detalles.telefono2 }}</p>
+				</div>
+				<div class="contacto-dato">
+					<label>Correo:</label>
+					<p>{{ detalles.correo }}</p>
+				</div>
+				
+			</div>
+		</div>
+	</section>
+</div>
+{% endblock %}

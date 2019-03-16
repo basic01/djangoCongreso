@@ -1,0 +1,23 @@
+{% extends 'base/index.html '%}
+{% load static %}
+{% block estilos %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/warning.css' %}">
+{% endblock%}
+
+{% block contenido %}
+<div class="contenedor">
+	<section class="exito">
+		{% if taller %}
+			<h1>Ya estás registrado en otro taller con el mismo horario:</h1>
+			<h2>{{taller}}</h2>
+			<p>¿Quieres hacer el cambio de talleres?</p>
+			<a href="{% url 'taller:tallerWarning' i t 1 %}" id="si">Sí</a>
+			<a href="{% url 'taller:tallerTalleres' %}" id="no">No</a>
+		{% else %}
+			<h1>Inscripción exitosa</h1>
+			<a href="{% url 'taller:tallerTalleres' %}" >Regresar</a>
+		{% endif %}
+	</section>
+</div>
+
+{% endblock %}

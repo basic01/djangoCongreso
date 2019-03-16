@@ -1,0 +1,32 @@
+{% extends 'base/indexAdmin.html' %}
+
+{% block contenido %}
+<h1>Participantes Mondragón</h1>
+<table class="table table-responsive table-hover">
+	<thead class="thead">
+		<tr>
+			<th scope="col">#</th>
+			<th scope="col">Apellido Paterno</th>
+			<th scope="col">Apellido Materno</th>
+			<th scope="col">Nombre</th>
+			<th scope="col">Correo</th>
+			<th scope="col">Institución</th>
+			<th scope="col">Mondragón</th>
+		</tr>
+	</thead>
+	<body>
+		{% for participante in participantes %}
+			<tr>
+				<td class="tabla-id">{{participante.id}}</td>
+				<td>{{participante.apellidoPaterno}}</td>
+				<td>{{participante.apellidoMaterno}}</td>
+				<td>{{participante.nombre}}</td>
+				<td>{{participante.correo}}</td>
+				<td>{{participante.institucion}}</td>
+				<td>{{participante.mondragon}}</td>
+			</tr>
+		{% endfor %}
+	</tbody>
+</table>
+
+{% endblock %}

@@ -1,0 +1,76 @@
+{% extends 'base/index.html '%}
+{% load static %}
+
+{% block estilos %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/programa.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/talleres.css' %}">
+{% endblock %}
+
+{% block contenido %}
+	
+	<div class="contenedor">
+		<section class="header">
+			<h1>Talleres</h1>
+		</section>
+		<section class="cronograma">
+			<section class="contenedor-tabla">
+				<div class="infoTabla">
+					<h3>Jueves 25 de abril</h3>
+					<small>Talleres 12:00 - 14:30</small>
+					<p>Selecciona un taller para inscribirte</p>
+				</div>
+				<div class="tabla">
+					{% for detalle in jueves1 %}
+					<div class="tabla-parrafos">
+						<p class="taller">{{detalle.nombre}}</p>
+						<p class="ponente">{{detalle.ponente}}</p>
+						<a href="{% url 'taller:tallerInscripcion' detalle.id %}" class="accion">Inscribirme</a>
+					</div>
+					{% endfor %}
+				</div>
+			</section>
+		</section>
+
+		<section class="cronograma">
+			<div class="infoTabla">
+				<h3>Jueves 25 de abril</h3>
+				<small>Talleres 17:10 - 19:30</small>
+				<p>Selecciona un taller para inscribirte</p>
+			</div>
+			<section class="contenedor-tabla">
+				<div class="tabla">
+					{% for detalle in jueves2 %}
+					<div class="tabla-parrafos">
+						<p class="taller">{{detalle.nombre}}</p>
+						<p class="ponente">{{detalle.ponente}}</p>
+						<a href="{% url 'taller:tallerInscripcion' detalle.id %}" class="accion">Inscribirme</a>
+					</div>
+					{% endfor %}
+				</div>
+			</section>
+		</section>
+
+
+		<section class="cronograma">
+			<section class="contenedor-tabla">
+				<div class="infoTabla">
+					<h3>Viernes 26 de abril</h3>
+					<small>Talleres 11:00 - 13:30</small>
+					<p>Selecciona un taller para inscribirte</p>
+				</div>
+				<div class="tabla">
+					{% for detalle in viernes %}
+					<div class="tabla-parrafos">
+						<p class="taller">{{detalle.nombre}}</p>
+						<p class="ponente">{{detalle.ponente}}</p>
+						<a href="{% url 'taller:tallerInscripcion' detalle.id %}" class="accion">Inscribirme</a>
+					</div>
+					{% endfor %}
+				</div>
+			</section>
+		</section>
+
+
+	</div>
+
+{% endblock %}
